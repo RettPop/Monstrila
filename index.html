@@ -1,0 +1,152 @@
+
+<!doctype html>
+<html lang=en>
+  <head>
+	<meta charset=utf-8>
+    <title>Монстрила-программила</title>
+	<link rel=icon type="image/png" href=favicon.png>
+	<link rel="shortcut icon" href=favicon.ico>
+
+    <link rel=stylesheet href=cm/combined.min.css>
+
+	<meta property="og:title" content="Монстрила-программила" />
+    <meta property="og:image" content="./cm/monster2.png" />
+	<meta property="og:description" content="Монстрила — это легкий обучающий курс программирования для детей. Монстрила рассказывает про такие основные инструменты Javascript как переменные, циклы, функции, выраженияи т.д. Монстрила делает это в игровой форме и совсем не страшный." />
+  </head>
+
+  <body>
+
+	<noscript>
+	  <h2>
+		Монстрила работает на Javascript. Чтобы можно было поиграться с Монстрилой включи у себя поддержку Javascript.
+	  </h2>
+	</noscript>
+	<div class=not-selectable unselectable=on id=tutor>
+	  <div id=tutor-avatar unselectable=on><img id=tutor-img uselectable=on src=cm/tutor0.png /></div>
+	  <div id=tutor-talk unselectable=on>
+				<p class="speech-bubble-green" unselectable=on id=tutor-message> </p>
+	  </div>
+	</div>
+
+	<div id=code-errors class=not-selectable unselectable=on></div>
+
+	<div class=not-selectable unselectable=on style="overflow:hidden;">
+    <textarea id=code name=code></textarea>
+    <iframe id=preview></iframe>
+	</div>
+
+	<div class=not-selectable unselectable=on style="overflow: hidden; width: 100%;">
+	  <div style="float: left; width: 100px;">
+		<span class="button not-selectable" title="Восстановить содержание урока" unselectable=on id=reset-button>ВОССТАНОВИТЬ</span>
+	  </div>
+	  <div style="float: left; margin-left: 100px; margin-top: 2px; width: 400px; text-align: center;">
+		<span id=lesson-section></span>
+	  </div>
+	  <div style="float: right;">
+		  <span id=lesson-number style="display: none;">Урок 1</span>
+		<span class="button not-selectable" title="Вернуться к предыдущему уроку" style="margin-right:10px;" unselectable=on id=back-button>НАЗАД</span>
+      </div>
+	</div>
+
+	<div id=info-links class=not-selectable unselectable=on>
+	  <span class=info-link unselectable=on>Как я работаю</span>
+	  |
+	  <span class=info-link unselectable=on>Уроки</span>
+	  |
+	  <span class=info-link unselectable=on>Про Монстрилу</span>
+	  |
+	  <span class=info-link unselectable=on>Контакты</span>
+	  |
+	  <span unselectable=on>&copy; 2013</span>
+	</div>
+
+	<div id=как-я-работаю style="display: none;">
+	  <h3>Как я работаю</h3>
+	  Монстрила учит детей и не совсем основам программирования на Javascript!
+	  <br><br>
+	  С Монстрилой легко обращаться. Просто следуй подсказкам Монстрилы. Если что-то не получается, просто пропусти урок. К нему можно вернуться, уогда захочешь.
+	  <br><br>Кнопка НАЗАД вернет тебя на предыдущий урок. Можешь поклацать на нее несколько раз, чтобы отмотать уроки еще дальше.
+	 Нажми кнопку "УРОК СНАЧАЛА", если хочешь начать урок сначала.
+	  <br><br>
+	  Монстрила запомнит, на каком уроке ты остановился, поэтому можешь спокойно закрывать окно обозревателя. Монстрила откроет его для тебя на том месте, где ты закончил
+	  <br><br>
+	  Have fun!
+	  <div class="simplemodal-close simplemodal-closex">X</div>
+	</div>
+	<div id=уроки style="display: none;">
+	  <h3>Уроки</h3>
+	  <ol id=lesson-sections-list>
+	  </ol>
+	  <div class="simplemodal-close simplemodal-closex">X</div>
+	</div>
+	<div id=про-монстрилу style="display: none;">
+	  <h3>Про Монстрилу</h3>
+
+	  Монстрила-программила любит программировать. Как только ты изменяешь код, ты видишь то, что он делает.
+	  <br><br>
+	  Проект начинается с простых рамочек и цветов. Но сюжет динамично развивается. Появляется простая анимация и фракталы. Очень важно, что мы учимся использовать циклы, переменные, условия, выражения и фукнции. И все это — на примерах.
+	  <br><br> 
+	  Монстрила поможет тебе начать изучать программирование. Но Монстрила не профессор. Он может только показать основы. Дальше тебе помогут настоящие профессора с бородой и очками.
+	  <br><br>
+	  <div class="simplemodal-close simplemodal-closex">X</div>
+	</div>
+	<div id=условия-использования style="display: none;">
+	  <h3>Terms of Use</h3>
+	  Code Monster from Crunchzilla is a website provided by Geeky Ventures.
+	  In order to use the Site, you must accept the terms set forth below.
+	  If you are a minor, your parent or guardian must accept the terms and
+	  full responsibility for your use of the website.  THESE TERMS OF
+	  SERVICE CONSTITUTE A BINDING LEGAL AGREEMENT BETWEEN YOU AND GEEKY
+	  VENTURES.  BY USING THE WEBSITE, YOU AGREE TO THESE TERMS.
+	  <br><br>
+	  The website HTML, text, images, audio, video, software or other
+	  content that is made available on this website are the property of
+	  Geeky Ventures or its content suppliers.  Before you use this content
+	  in some way please take care to ensure that you have the relevant
+	  rights and permissions.  You are welcome to display on your computer,
+	  download and print pages from this website for personal, educational
+	  and non-commercial use only.
+	  <br><br>
+	  THE WEBSITE IS PROVIDED "AS IS".  Your use of this website is at your
+	  own risk.  Geeky Ventures disclaims all warranties, expressed or
+	  implied, including without limitation, warranties of merchantability
+	  and fitness of a particular purpose.  Geeky Ventures disclaims
+	  liability for any direct, indirect, incidental, special,
+	  consequential, exemplary, punitive or other damages, or lost profits,
+	  that may result directly or indirectly from the use of the
+	  website. This includes, without limitation, any damage to computer
+	  systems, hardware or software, loss of data, or any other performance
+	  failures, any errors, bugs, viruses or other defects that result from,
+	  or are associated with the use of this website.
+	  <br><br>
+	  Geeky Ventures may modify this agreement at any time, and such
+	  modifications shall be effective immediately.
+	  <div class="simplemodal-close simplemodal-closex">X</div>
+	</div>
+	<div id=контакты style="display: none;">
+	  <h3>Контакты</h3>
+	  Можешь писать Монстриле по адресу monster@leftbit.com
+	  <br><br>
+	  Монстрила с удовольствием выслушает все твои рекомендации и советы.
+	  <br><br>
+	  Мострилу придумали и сделали ребята из <a href="http://www.crunchzilla.com/" target="_blank">Geeky Ventures</a>.
+	  Они сидят где-то в офисе в Сиэттле. Но они не захотели научить Монстрилу разговаривать по-русски. Поэтому он научился этому сам. Монстрила не зарабатывает денег. Он просто учит программированию. ;)
+	  <div class="simplemodal-close simplemodal-closex">X</div>
+	</div>
+	
+	<div id=old-browser-warning style="display: none;">
+	  <h3>Предупреждение по поводу старых программ</h3>
+	  Извини, но твой браузер староват для Монстрилы-программилы. Мне бы чего-то посвежее...
+	  <br><br> 
+	  Монстрила любит Chrome <a href="http://google.com/chrome">Chrome</a> от корпорации добра
+	  и <a href="http://mozilla.com/firefox">Firefox</a> от Мозиллы. Монстрила и Мозилла :).  В них он точно работает!
+	  <br><br>
+	  Можешь, конечно, попробовать поработать с Монстрилой в своей версии обозревателя, но Монстрила может загрустить в нем.
+	  <div class="simplemodal-close simplemodal-closex">X</div>
+	</div>
+
+    <script src=cm/combined.min.js></script>
+
+  </body>
+</html>
+
